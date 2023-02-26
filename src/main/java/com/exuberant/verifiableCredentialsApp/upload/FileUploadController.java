@@ -25,10 +25,6 @@ import java.util.Optional;
 public class FileUploadController {
 
     private final UploadFileRepository uploadFileRepository;
-    @GetMapping("/hello")
-    public ResponseEntity<String> sayHello() {
-        return ResponseEntity.ok("Hello!");
-    }
 
     @PostMapping("/upload")
     public ResponseEntity<String> uploadDocument(@RequestParam MultipartFile file) throws IOException {
